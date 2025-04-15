@@ -23,9 +23,8 @@ jobs:
 
       - name: Run health monitor
         run: |
-          pwd
-          ls
-          go run main.go endpoints.yaml
+
+          go run main.go endpoint.yaml
 
     #   - name: Upload health log
     #     uses: actions/upload-artifact@v4
