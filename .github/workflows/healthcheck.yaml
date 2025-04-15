@@ -2,11 +2,13 @@ name: Endpoint Health Monitor
 
 on:
   workflow_dispatch:
+  
 
 
 jobs:
   run-monitor:
     runs-on: ubuntu-latest
+    timeout-minutes: 1
 
     steps:
       - name: Checkout repo
@@ -30,4 +32,4 @@ jobs:
     #     uses: actions/upload-artifact@v4
     #     with:
     #       name: health-log
-    #       path: ../endpoint.yaml
+    #       path: endpoint-health.txt
