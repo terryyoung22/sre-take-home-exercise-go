@@ -15,4 +15,4 @@
 
 ### Optimizations:
 - [ ] Removed the io/util, one less mod to deal with when OS can handle it.
-- [ ]  
+- [ ]  Added a GHA pipeline that runs the code for us. can be a cron somewhere but used it for this. Could also have the pipeline email the results in the health.txt but didnt wanna overdue to much. just show concept. Also i have it as a workflow manual so it isnt running all the time but added in code for the cron if i wanted to run on its own
