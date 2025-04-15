@@ -1,10 +1,7 @@
 package main
 
 import (
-	"bytes"
-	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"math"
 	"net/http"
@@ -33,11 +30,7 @@ var stats = make(map[string]*DomainStats)
 func checkHealth(endpoint Endpoint) {
 	var client = &http.Client{}
 
-	bodyBytes, err := json.Marshal(endpoint)
-	if err != nil {
-		return
-	}
-	reqBody := bytes.NewReader(bodyBytes)
+	reqBody := strings.NewReader(endpoint.Body)
 
 	req, err := http.NewRequest(endpoint.Method, endpoint.URL, reqBody)
 	if err != nil {
@@ -94,7 +87,7 @@ func main() {
 	}
 
 	filePath := os.Args[1]
-	data, err := ioutil.ReadFile(filePath)
+	data, err := os.ReadFile(filePath)
 	if err != nil {
 		log.Fatal("Error reading file:", err)
 	}

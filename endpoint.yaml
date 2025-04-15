@@ -1,0 +1,13 @@
+- body: '{"foo":"bar"}'
+  headers:
+    content-type: application/json
+  method: POST
+  name: sample body up
+  url: https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/body
+- name: sample index up
+  url: https://dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com/
+- body: '{"aws":"rds"}'
+  headers:
+    content-type: application/json
+  name: dynamoDBup
+  url: https://dynamodb.us-west-2.amazonaws.com
